@@ -1,0 +1,19 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+    - path: data/raw/
+      md5: d86105c6b4f9377c096869400fa1263c.dir
+      size: 107788163
+      nfiles: 13399
+    - path: src/prepare.py
+      md5: ef804f358e00edcfe52c865b471f8f55
+      size: 1231
+    outs:
+    - path: data/prepared/test.csv
+      md5: cb7ec19d019ec1fd0f1b52d720351812
+      size: 84115
+    - path: data/prepared/train.csv
+      md5: 3b12d0d64955a454dfa0ffcc10724082
+      size: 208636
