@@ -31,4 +31,15 @@ stages:
       md5: 44f64e0a5a4c1a05865e4574b22000dc
       size: 241075
   evaluate:
-    cmd: ' '
+    cmd: python src/evaluate.py
+    deps:
+    - path: model/model.joblib
+      md5: 44f64e0a5a4c1a05865e4574b22000dc
+      size: 241075
+    - path: src/evaluate.py
+      md5: b197277667d6269271fff4ae4af8a941
+      size: 645
+    outs:
+    - path: metrics/accuracy.json
+      md5: 0ccd761f33243c1a07380f9bab927f7c
+      size: 32
